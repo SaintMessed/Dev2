@@ -30,6 +30,6 @@ jobs:
 
     steps:
       - run: |
-          curl -X POST https://api.telegram.org/bot${{ secrets.8621087888:AAFjRKLASZgGoPc0DF3GtP05FiPHDF2A5yc }}/sendMessage \
-          -d chat_id=${{ secrets.8621087888 }} \
+          curl -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage \
+          -d chat_id=${{ secrets.CHAT_ID }} \
           -d text="Pipeline done for PR"
